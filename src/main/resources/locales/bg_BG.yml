@@ -1,0 +1,588 @@
+# AMGCore Bulgarian Language File with a Dash of Humor
+
+# General messages
+general:
+  error: "<red>Опа! Нещо се прецака: {0}</red>"
+  player_only: "<red>Тази команда е само за играчи, не за ботове или призраци!</red>"
+
+# Command messages
+command:
+  unknown: "<red>Тази команда е като НЛО – никой не я е виждал!</red>"
+  no_permission: "<red>Нямаш пропуск за тази команда, приятел!</red>"
+  players_only: "<red>Само играчи могат да ползват тази команда, не и компютърни гении!</red>"
+  player_not_found: "<red>Играчът {0} изчезна като чорап в пералня!</red>"
+  core:
+    reload_success: "<green>Конфигурацията на плъгина се презареди по-бързо от кафето ми!</green>"
+    data_usage: "<red>Използвай: /core data <player>, не е ракетна наука!</red>"
+    data_reloaded: "<green>Данните за {0} се презаредиха, свежи като утринна роса!</green>"
+    unknown_option: "<red>Тази опция е по-неизвестна от тайната рецепта за баклава! Използвай 'reload', 'data' или 'info'.</red>"
+    module:
+      enabled: "<green>Модул {0} се включи като лампа в тъмна стая!</green>"
+      disabled: "<green>Модул {0} угасна като свещ на вятъра.</green>"
+      already_enabled: "<yellow>Модул {0} вече свети като коледна елха!</yellow>"
+      already_disabled: "<yellow>Модул {0} вече е в спящ режим, не го бутай!</yellow>"
+      not_found: "<red>Модул {0} е като чорап след прането – няма го!</red>"
+      enable_failed: "<red>Не можах да включа модул {0}. Причина: {1}</red>"
+      disable_failed: "<red>Не можах да изключа модул {0}. Причина: {1}</red>"
+      dependency_failed: "<red>Не можах да включа зависимост {0} за модул {1}. Нещо се прецака!</red>"
+      usage: "<red>Използвай: /module <list|enable|disable|info|reload>, не е ядрена физика!</red>"
+      list:
+        header: "<yellow>Налични модули (не са баклава, но пак са яки):</yellow>"
+        entry: "<gray>- {0}: {1}</gray>"
+        empty: "<red>Няма модули, празно като портфейла ми!</red>"
+      info:
+        header: "<yellow>Инфо за модул {0}, защото любопитството е сила!</yellow>"
+        status: "<gray>Статус: {0}</gray>"
+        dependencies: "<gray>Зависимости: {0}</gray>"
+        no_dependencies: "<gray>Зависимости: Няма, този модул е самотен вълк!</gray>"
+      reload:
+        success: "<green>Модул {0} се презареди по-бързо от бабин компютър!</green>"
+        failed: "<red>Презареждането на модул {0} се провали. Причина: {1}</red>"
+    info:
+      header: "<yellow>AMGCore Инфо, защото знанието е сила!</yellow>"
+      version: "<white>Версия:</white> <gray>{0}</gray>"
+      status_header: "<yellow>Статус (не на връзката ти):</yellow>"
+      debug_status: "<white>Режим за дебъгване:</white> <gray>{0}</gray>"
+      players_header: "<yellow>Играчи (не тези от махалата):</yellow>"
+      online_players: "<white>Онлайн играчи:</white> <gray>{0}</gray>"
+      loaded_data: "<white>Заредени данни за играчи:</white> <gray>{0}</gray>"
+      storage_header: "<yellow>Съхранение (не за зимнина):</yellow>"
+      data_directory: "<white>Директория за данни:</white> <gray>{0}</gray>"
+      save_interval: "<white>Интервал за автозапис:</white> <gray>{0} секунди</gray>"
+      commands_header: "<yellow>Команди (не за кучета):</yellow>"
+      command_core: "<white>/core</white> <gray>- Основни команди на плъгина</gray>"
+      command_reload: "<white>/core reload</white> <gray>- Презареди конфигурацията, без паника!</gray>"
+      command_data: "<white>/core data <player></white> <gray>- Презареди данните на играч</gray>"
+      command_debug: "<white>/core debug</white> <gray>- Включи/изключи дебъг режима</gray>"
+  afk:
+    kick_message: "<red>Изритаха те, защото си стоял AFK като статуя!</red>"
+    tab_prefix: "[AFK] "
+    now_afk: "<gray>{0} вече е AFK, сигурно отиде за кафе!{1}</gray>"
+    no_longer_afk: "<gray>{0} се върна, кафето свърши!</gray>"
+
+# Money commands
+money:
+  usage: "<red>Използвай: /money [player], не е сложно!</red>"
+  console_usage: "<red>Конзолата трябва да посочи играч, не е магьосник!</red>"
+  player_not_found: "<red>Играчът {0} изчезна като парите ми след разпродажба!</red>"
+  no_permission_others: "<red>Нямаш право да надничаш в чуждите портфейли!</red>"
+  balance_self: "<green>Твоят баланс: </green><gold>${0}</gold>, харчи разумно!"
+  balance_other: "<yellow>{0}</yellow><green> има баланс: </green><gold>${1}</gold>"
+  checking_offline: "<gray>Проверявам данни за офлайн играч... чакай, не бягай!</gray>"
+  error:
+    data_load: "<red>Не можах да заредя данните ти, нещо се обърка!</red>"
+    data_load_other: "<red>Не можах да заредя данните на {0}, явно са в отпуск!</red>"
+    database_error: "<red>Грешка в базата данни: {0}, технологията ни предаде!</red>"
+    player_not_found: "<red>Играчът {0} е като призрак – няма го!</red>"
+    invalid_amount: "<red>Невалидна сума: {0}, не измисляй числа!</red>"
+    amount_positive: "<red>Сумата трябва да е положителна, не сме на минус!</red>"
+    amount_negative: "<red>Сумата не може да е отрицателна, не сме банка!</red>"
+  givemoney:
+    usage: "<red>Използвай: /givemoney <player> <amount>, не раздавай бонбони!</red>"
+    no_permission: "<red>Нямаш право да раздаваш пари като Дядо Коледа!</red>"
+    success: "<green>Дадох {0} на {1}. Нов баланс: {2}</green>"
+    received: "<green>Получи {0} от {1}. Нов баланс: {2}, време за шопинг!</green>"
+  setmoney:
+    usage: "<red>Използвай: /setmoney <player> <amount>, не е магия!</red>"
+    no_permission: "<red>Нямаш право да пипаш балансите, не си счетоводител!</red>"
+    success: "<green>Балансът на {0} е настроен на {1}</green>"
+    changed: "<green>Балансът ти беше настроен на {0} от {1}, не го профукай!</green>"
+  baltop:
+    loading: "<gray>Зареждам класацията за богаташи...</gray>"
+    header: "<gold>Най-богатите играчи (милионери и половина):</gold>"
+    entry: "<gray>{0}. </gray><yellow>{1}</yellow><gray>: </gray><gold>${2}</gold>"
+    empty: "<red>Няма данни за баланси, всички са фалирали!</red>"
+    footer: "<gray>Показвам топ 10 богаташи</gray>"
+    error:
+      invalid_page: "<red>Невалиден номер на страница: {0}, не прекалявай!</red>"
+  unknown: "<red>Тази команда за пари е по-неизвестна от съкровището на пиратите!</red>"
+  module_unavailable: "<red>Грешка: Модулът за пари е в отпуск!</red>"
+  error_occurred: "<red>Нещо се обърка с командата, сигурно е пълнолуние!</red>"
+
+# Playtime messages
+playtime:
+  usage: "<red>Използвай: /playtime [player], не е толкова сложно!</red>"
+  self: "<yellow>Твоето игрово време: <white>{0}</white>, браво за отдадеността!</yellow>"
+  other: "<yellow>Игровото време на {0}: <white>{1}</white>, явно нямат живот!</yellow>"
+  not_found: "<red>Играчът {0} е изчезнал като ключовете ми!</red>"
+  module_unavailable: "<red>Грешка: Модулът за игрово време е на почивка!</red>"
+  error_occurred: "<red>Нещо се прецака с командата, пробвай пак!</red>"
+
+# Chat messages
+chat:
+  module_unavailable: "<red>Грешка: Чат модулът е на мълчалив режим!</red>"
+  error_occurred: "<red>Командата се провали, сигурно чатът е прегрял!</red>"
+  no_permission: "<red>Нямаш право да чатиш с тази команда, тренирай още!</red>"
+  msg:
+    usage: "<red>Използвай: /msg <player> <message>, не е ракета!</red>"
+    self: "<red>Не можеш да си пишеш сам, това не е дневник!</red>"
+    player_not_found: "<red>Играчът {0} е офлайн или в паралелна вселена!</red>"
+    format_incoming: "<gray>[ЧАТ]</gray>(<yellow>{0}</yellow> <gray>=></gray> <yellow>Ти</yellow>) <white>{1}</white>"
+    format_outgoing: "<gray>[ЧАТ]</gray>(<yellow>Ти</yellow> <gray>=></gray> <yellow>{0}</yellow>) <white>{1}</white>"
+  mute:
+    usage: "<red>Използвай: /mute <player> [duration] [reason], не е ядрена физика!</red>"
+    no_permission: "<red>Нямаш право да заглушаваш хора, не си модератор в живота!</red>"
+    success: "<green>Заглуши {0} за {1}. Причина: {2}</green>"
+    target_muted: "<red>Беше заглушен за {0} от {1}. Причина: {2}</red>"
+    unmute_success: "<green>Отглушен е {0}, нека пак говори!</green>"
+    target_unmuted: "<green>Отглушен си от {0}, давай на чата!</green>"
+    already_muted: "<red>{0} вече е заглушен, не прекалявай!</red>"
+    not_muted: "<red>{0} не е заглушен, защо се опитваш?</red>"
+    exempt: "<red>{0} е недосегаем за заглушаване, явно е ВИП!</red>"
+    self: "<red>Не можеш да се заглушиш сам, това е тъжно!</red>"
+    invalid_duration: "<red>Невалиден формат за време. Използвай: 1d, 2h, 30m, или 60s</red>"
+    invalid_time_unit: "<red>Невалидна мерна единица. Използвай: d (дни), h (часове), m (минути), или s (секунди)</red>"
+  format:
+    global: "<gray>[ГЛОБАЛ]</gray> <yellow>{0}</yellow>: <white>{1}</white>"
+    incoming: "<gray>[СЪОБЩЕНИЕ]</gray>(<yellow>{0}</yellow> <gray>=></gray> <yellow>Ти</yellow>) <white>{1}</white>"
+    outgoing: "<gray>[СЪОБЩЕНИЕ]</gray>(<yellow>Ти</yellow> <gray>=></gray> <yellow>{0}</yellow>) <white>{1}</white>"
+  reply:
+    usage: "<red>Използвай: /r <message>, не е сложно!</red>"
+    no_permission: "<red>Нямаш право да отговаряш, тренирай първо!</red>"
+    no_recipient: "<red>Няма на кого да отговориш, сам си в чата!</red>"
+    recipient_offline: "<red>Играчът, на когото пишеш, избяга офлайн!</red>"
+  prefixes:
+    global: "<gray>[ГЛОБАЛ]</gray>"
+    msg: "<gray>[СЪОБЩЕНИЕ]</gray>"
+    ad: "<gold>[РЕКЛАМА]</gold>"
+  broadcast:
+    usage: "<red>Употреба: /broadcast <съобщение></red>"
+    no_permission: "<red>Нямаш право да използваш съобщения за излъчване.</red>"
+    format: "<red>[СЪОБЩЕНИЕ]</red> <yellow>{0}</yellow><white>: {1}</white>"
+  ads:
+    usage: "<red>Използвай: /ad <message>, направи си реклама!</red>"
+    no_permission: "<red>Нямаш право да пускаш реклами, не си маркетинг гуру!</red>"
+    cooldown: "<red>Почакай {0} секунди преди да пуснеш нова реклама, не прекалявай!</red>"
+    success: "<green>Рекламата ти полетя успешно!</green>"
+    insufficient_funds: "<red>Нямаш пари за реклама, струва ${0}!</red>"
+    format: "<gold>[РЕКЛАМА]</gold> <yellow>{0}</yellow>: <white>{1}</white>"
+  reply:
+    usage: "<red>Използвай: /r <message>, не е ядрена физика!</red>"
+    no_permission: "<red>Нямаш право да отговаряш, тренирай още!</red>"
+    no_recipient: "<red>Няма на кого да отговориш, сам си в чата!</red>"
+    recipient_offline: "<red>Играчът, на когото пишеш, избяга офлайн!</red>"
+  mute:
+    usage: "<red>Използвай: /mute <player> [duration] [reason], не е сложно!</red>"
+    no_permission: "<red>Нямаш право да заглушаваш, не си модератор!</red>"
+    success: "<green>Заглуши {0} за {1}. Причина: {2}</green>"
+    target_muted: "<red>Беше заглушен за {0} от {1}. Причина: {2}</red>"
+    unmute_success: "<green>Отглушен е {0}, нека пак говори!</green>"
+    target_unmuted: "<green>Отглушен си от {0}, давай на чата!</green>"
+    already_muted: "<red>{0} вече е заглушен, не прекалявай!</red>"
+    not_muted: "<red>{0} не е заглушен, защо се опитваш?</red>"
+    exempt: "<red>{0} е недосегаем за заглушаване, явно е ВИП!</red>"
+    self: "<red>Не можеш да се заглушиш сам, това е тъжно!</red>"
+  unmute:
+    success: "<green>Успешно отглушен {0}, нека се развихри!</green>"
+
+# Teleport commands
+teleport:
+  module_unavailable: "<red>Грешка: Телепорт модулът е на почивка!</red>"
+  error_occurred: "<red>Нещо се обърка с телепорта, сигурно е пълнолуние!</red>"
+  no_permission: "<red>Нямаш право да се телепортираш, не си магьосник!</red>"
+  tpa:
+    usage: "<red>Използвай: /tpa <player>, не е магия!</red>"
+    sent: "<green>Изпрати заявка за телепорт до {0}, дръж палци!</green>"
+    received: "<yellow>{0}</yellow><green> иска да се телепортира до теб. Използвай </green>/tpaccept<green> или </green>/tpdeny"
+    expired: "<red>Заявката ти за телепорт до {0} изтече, бързо бяга времето!</red>"
+    no_requests: "<red>Нямаш чакащи заявки за телепорт, сам си!</red>"
+    already_pending: "<red>Вече имаш заявка до {0}, не бързай!</red>"
+  tpaccept:
+    usage: "<red>Използвай: /tpaccept [player], не е сложно!</red>"
+    success: "<green>Заявката за телепорт е приета, {0} идва!</green>"
+    accepted: "<green>{0} прие заявката ти, телепортираш се!</green>"
+    no_request: "<red>Няма заявка за телепорт от {0}, грешка в матрицата!</red>"
+  tpdeny:
+    usage: "<red>Използвай: /tpdeny [player], не е ядрена физика!</red>"
+    success: "<green>Заявката за телепорт е отказана, чао!</green>"
+    denied: "<red>{0} отказа телепорта ти, явно не те харесва!</red>"
+  home:
+    usage: "<red>Използвай: /home [name], не се губи!</red>"
+    set_usage: "<red>Използвай: /sethome [name], направи си гнездо!</red>"
+    del_usage: "<red>Използвай: /delhome <name>, не е за вечно!</red>"
+    not_found: "<red>Дом {0} не е намерен, сигурно е продаден!</red>"
+    set: "<green>Дом {0} е настроен, добре дошъл у дома!</green>"
+    deleted: "<green>Дом {0} е изтрит, време за нов!</green>"
+    teleported: "<green>Телепортиран до дома {0}, чакай кафе!</green>"
+    limit: "<red>Достигна лимита си за домове ({0}), не си султан!</red>"
+    list:
+      entry: "<gray>Списък с домове: {0}</gray>"
+      empty: "<red>Няма намерени домове, бездомник ли си?</red>"
+      teleported: "<green>Телепортиран до дома {0}, ура!</green>"
+  warp:
+    usage: "<red>Използвай: /warp <name>, не се бави!</red>"
+    set_usage: "<red>Използвай: /setwarp <name>, направи си портал!</red>"
+    del_usage: "<red>Използвай: /delwarp <name>, махни го!</red>"
+    not_found: "<red>Точка за телепорт {0} не е намерена, изгуби се!</red>"
+    set: "<green>Точка за телепорт {0} е настроена, готово!</green>"
+    deleted: "<green>Точка за телепорт {0} е изтрита, чао!</green>"
+    teleported: "<green>Телепортиран до точка {0}, магия!</green>"
+    list:
+      entry: "<gray>Списък с точки за телепорт: {0}</gray>"
+      empty: "<red>Няма намерени точки за телепорт, празно е!</red>"
+      teleported: "<green>Телепортиран до точка {0}, ура!</green>"
+  spawn:
+    set: "<green>Точка за раждане е настроена, нов живот!</green>"
+    teleported: "<green>Телепортиран до спауна, добре дошъл!</green>"
+  back:
+    teleported: "<green>Телепортиран до предишното ти място, носталгия!</green>"
+    no_previous: "<red>Нямаш предишно място за телепорт, пътешественик!</red>"
+
+# Player command messages
+player:
+  error:
+    manager_unavailable: "<red>Мениджърът на играчи е на почивка, пиши на админа!</red>"
+    command_error: "<red>Командата се провали, сигурно е пълнолуние!</red>"
+    player_not_found: "<red>Играчът не е намерен, сигурно е нинджа!</red>"
+    console_specify_player: "<red>Конзолата трябва да посочи играч, не е ясновидец!</red>"
+    no_permission_others: "<red>Нямаш право да пипаш другите играчи, не си бог!</red>"
+    no_permission: "<red>Нямаш право за тази команда, тренирай още!</red>"
+  vanish:
+    enabled: "<green>Режим невидимка е включен, ставаш призрак!</green>"
+    disabled: "<green>Режим невидимка е изключен, пак си видим!</green>"
+    enabled_other: "<green>Невидимка включена за {0}, сега е нинджа!</green>"
+    disabled_other: "<green>Невидимка изключена за {0}, пак е на светло!</green>"
+    other: "<green>Режим невидимка {0} за {1}, магия!</green>"
+    self: "<green>Режим невидимка {0}, ставаш дух!</green>"
+  god:
+    enabled: "<green>Режим бог е включен, чувствай се всемогъщ!</green>"
+    disabled: "<green>Режим бог е изключен, пак си смъртен!</green>"
+    enabled_other: "<green>Режим бог включен за {0}, сега е Зевс!</green>"
+    disabled_other: "<green>Режим бог изключен за {0}, пак е обикновен!</green>"
+    other: "<green>Режим бог {0} за {1}, божествено!</green>"
+    self: "<green>Режим бог {0}, чувствай се като Олимп!</green>"
+  fly:
+    enabled: "<green>Летенето е включено, размахай крила!</green>"
+    disabled: "<green>Летенето е изключено, кацай на земята!</green>"
+    enabled_other: "<green>Летене включено за {0}, сега е орел!</green>"
+    disabled_other: "<green>Летене изключено за {0}, пак е пешеходец!</green>"
+    other: "<green>Летене {0} за {1}, полетя!</green>"
+    self: "<green>Летенето е включено за теб, давай нагоре!</green>"
+  speed:
+    usage: "<red>Използвай: /speed <1-10> [fly|walk] [player], не е Формула 1!</red>"
+    self: "<green>Настрои скоростта на {0} на {1}, бързай бавно!</green>"
+    other: "<green>Настрои скоростта на {0} за {1} на {2}, лети!</green>"
+    error:
+      invalid_range: "<red>Скоростта трябва да е между 1 и 10, не си Супермен!</red>"
+      invalid_number: "<red>Невалидна стойност за скорост, не измисляй!</red>"
+  heal:
+    self: "<green>Излекуван си, готов за нови приключения!</green>"
+    other: "<green>Излекувах {0}, сега е като нов!</green>"
+  feed:
+    self: "<green>Нахранен си, няма да умреш от глад!</green>"
+    other: "<green>Нахраних {0}, сега е сит и доволен!</green>"
+
+# Stats command messages
+stats:
+  error:
+    manager_unavailable: "<red>Мениджърът за статистики е на почивка, пиши на админа!</red>"
+    player_not_found: "<red>Играчът не е намерен, сигурно е нинджа!</red>"
+    console_must_specify: "<red>Конзолата трябва да посочи играч, не е магьосник!</red>"
+    no_stats_found: "<red>Няма статистики за {0}, явно е новобранец!</red>"
+    command_error: "<red>Командата се провали, сигурно е пълнолуние!</red>"
+  display:
+    header: "<yellow>Статистики за <white>{0}</white>, да видим как се справя!</yellow>"
+    first_join: "<yellow>Първо влизане: <white>{0}</white>, добре дошъл!</yellow>"
+    last_seen: "<yellow>Последно видян: <white>{0}</white>, къде се губи?</yellow>"
+    playtime: "<yellow>Игрово време: <white>{0}</white>, браво за отдадеността!</yellow>"
+    kills: "<yellow>Убийства: <white>{0}</white> (<green>{1} PvP</green>, <red>{2} Мобове</red>)</yellow>"
+    deaths: "<yellow>Смърти: <white>{0}</white>, опитай да не умираш!</yellow>"
+    kd_ratio: "<yellow>K/D Съотношение: <white>{0}</white>, покажи им!</yellow>"
+  time:
+    online_now: "Онлайн сега, не спира!"
+    days_ago: "{0} дни назад, носталгия!"
+    hours_ago: "{0} часа назад, скоро беше тук!"
+    minutes_ago: "{0} минути назад, току-що избяга!"
+    seconds_ago: "{0} секунди назад, мигна и го няма!"
+
+# Server info messages
+serverinfo:
+  module_unavailable: "<red>Грешка: Модулът за инфо за сървъра е на почивка!</red>"
+  error_occurred: "<red>Командата се провали, сигурно е пълнолуние!</red>"
+  no_permission: "<red>Нямаш право да гледаш инфото за сървъра, не си админ!</red>"
+  error:
+    save_rules: "<red>Не можах да запазя правилата на сървъра, нещо се обърка!</red>"
+  rules:
+    title: "<yellow>Правила на сървъра, не ги чупи!</yellow>"
+    entry: "<gray>{0}.</gray> <white>{1}</white>"
+    empty: "<red>Няма правила, анархия ли е това?</red>"
+    reloaded: "<green>Правилата се презаредиха, сега без извинения!</green>"
+  stats:
+    title: "<yellow>Статистики на сървъра, да видим как е!</yellow>"
+    uptime: "<yellow>Време на работа:</yellow> <white>{0}</white>"
+    memory: "<yellow>Използвана памет:</yellow> <white>{0} MB / {1} MB (Макс: {2} MB)</white>"
+    tps: "<yellow>TPS (1m, 5m, 15m):</yellow> <white>{0}</white>"
+    online_players: "<yellow>Играчи:</yellow> <white>{0}/{1}</white>"
+    worlds:
+      header: "<yellow>Статистики за световете:</yellow>"
+      entry: "<white>{0}:</white>"
+      chunks: "<gray>- Чънкове:</gray> <white>{0}</white>"
+      entities: "<gray>- Същества:</gray> <white>{0}</white>"
+      living_entities: "<gray>- Живи същества:</gray> <white>{0}</white>"
+  playerlist:
+    title: "<yellow>Онлайн играчи ({0}/{1}):</yellow>"
+    world_header: "<green>{0} ({1}):</green>"
+    player: "  <white>{0}</white>"
+    player_afk: "  <white>{0} <gray>[AFK]</gray></white>"
+
+# Inventory messages
+inventory:
+  usage: "<red>Използвай: /inventory <player>, не надничай напразно!</red>"
+  title: "Инвентар на {0}, какво крие?"
+  opened: "<green>Отворих инвентара на {0}, да видим какво има!</green>"
+  error:
+    self_view: "<red>Не можеш да гледаш собствения си инвентар с тази команда, използвай огледало!</red>"
+    player_offline: "<red>Играчът вече не е онлайн, избяга!</red>"
+  look:
+    usage: "<red>Използвай: /lookinventory <player>, не е шпионска мисия!</red>"
+    title: "Инвентар на {0}, какво крие?"
+    error:
+      no_permission_self: "<red>Нямаш право да гледаш собствения си инвентар, странно, нали?</red>"
+
+# AFK messages
+afk:
+  module_not_available: "<red>Грешка: AFK модулът е на почивка!</red>"
+  enabled: "<green>{0} вече е AFK, сигурно гледа сериал!{1}</green>"
+  enabled_self: "<green>Ти си AFK, време за почивка!{0}</green>"
+  disabled: "<green>{0} вече не е AFK, върна се в играта!</green>"
+  disabled_self: "<green>Вече не си AFK, давай напред!</green>"
+  reason_suffix: " <gray>- {0}</gray>"
+
+# Debug messages
+debug:
+  usage: "<red>Използвай: /coredebug <on|off|list>, не е ядрена физика!</red>"
+  enabled: "<green>Дебъг режимът е включен, сега ще видим какво става!</green>"
+  disabled: "<green>Дебъг режимът е изключен, стига толкова шпиониране!</green>"
+  unknown_option: "<red>Непозната опция, използвай 'on', 'off' или 'list', не измисляй!</red>"
+  status:
+    header: "<gold>Статус на дебъгването:</gold>"
+    mode: "<yellow>- Режим: </yellow>{0,choice,0#<red>ИЗКЛЮЧЕН</red>|1#<green>ВКЛЮЧЕН</green>}"
+    log_dir: "<yellow>- Директория за логове: </yellow><aqua>{0}</aqua>"
+
+# Jail messages
+jail:
+  info:
+    initialized: "Затворът е готов, решетките са на място!"
+    loaded_jails: "Заредих {0} затвора, готови за гости!"
+    loaded_players: "Заредих {0} затворници, дано не бягат!"
+  error:
+    initialize_tables: "<red>Не можах да подготвя таблиците за затвора, нещо се обърка!</red>"
+    world_not_found: "<red>Не можах да заредя затвор {0} - свят {1} изчезна!</red>"
+    load_jails: "<red>Не можах да заредя затворите от базата данни, хаос!</red>"
+    load_players: "<red>Не можах да заредя затворниците, сигурно са избягали!</red>"
+    create_jail: "<red>Не можах да създам затвор {0}, решетките се счупиха!</red>"
+    delete_jail: "<red>Не можах да изтрия затвор {0}, някой го ползва!</red>"
+    jail_player: "<red>Не можах да затворя играч {0}, той е нинджа!</red>"
+    unjail_player: "<red>Не можах да освободя играч {0}, ключът се изгуби!</red>"
+    update_data: "<red>Не можах да обновя данните за затвора на {0}, хаос!</red>"
+  player:
+    jailed: "<red>Затворен си за {0}, мисли си за постъпките!</red>"
+    jailed_reason: "<red>Причина: {0}, не се оправдавай!</red>"
+    released: "<green>Освободен си от затвора, бъди добър!</green>"
+    released_time_served: "<green>Излежа си времето и си свободен, браво!</green>"
+    time_remaining: "<gray>Оставащо време в затвора: {0} минути</gray>"
+    no_break: "<red>Не можеш да чупиш блокове в затвора, не си Худини!</red>"
+    no_place: "<red>Не можеш да слагаш блокове в затвора, не е Лего!</red>"
+    no_command: "<red>Не можеш да ползваш команди в затвора, мисли си!</red>"
+    no_teleport: "<red>Не можеш да се телепортираш от затвора, няма бягство!</red>"
+    no_damage: "<red>Не можеш да удряш други играчи в затвора, бъди мирен!</red>"
+    no_damage_jailed: "<red>Не можеш да удряш затворници, не си шериф!</red>"
+    no_interact: "<red>Не можеш да пипаш блокове в затвора, само гледай!</red>"
+    no_chat: "<red>Не можеш да чатиш в затвора, мълчи и мисли!</red>"
+    reconnect: "<green>Освободен си от затвора, презареди се за пълна свобода!</green>"
+  module_unavailable: "<red>Грешка: Затворническият модул е на почивка!</red>"
+  error_occurred: "<red>Нещо се обърка с командата, сигурно е пълнолуние!</red>"
+  no_permission: "<red>Нямаш право за тази команда, не си надзирател!</red>"
+  create:
+    usage: "<red>Използвай: /createjail <name>, направи си затвор!</red>"
+    success: "<green>Създаден затвор {0}, готов за гости!</green>"
+    exists: "<red>Затвор {0} вече съществува, не прекалявай!</red>"
+  delete:
+    usage: "<red>Използвай: /deletejail <name>, махни решетките!</red>"
+    success: "<green>Изтрит затвор {0}, свободно е!</green>"
+    not_found: "<red>Затвор {0} не е намерен, изгуби се!</red>"
+    in_use: "<red>Не можеш да изтриеш затвор {0}, някой го ползва!</red>"
+  jail:
+    usage: "<red>Използвай: /jail <player> <jail> <duration> [reason], не е сложно!</red>"
+    success: "<green>Затворих {0} в {1} за {2}. Причина: {3}</green>"
+    target: "<red>Затворен си в {0} за {1}. Причина: {2}</red>"
+    already_jailed: "<red>{0} вече е зад решетките, не прекалявай!</red>"
+    not_found: "<red>Затвор {0} не е намерен, изгуби се!</red>"
+    exempt: "<red>{0} не може да бъде затворен, явно е ВИП!</red>"
+    self: "<red>Не можеш да се затвориш сам, това е тъжно!</red>"
+  unjail:
+    usage: "<red>Използвай: /unjail <player>, пусни го на свобода!</red>"
+    success: "<green>Освободих {0}, нека е свободен!</green>"
+    target: "<green>Освободен си от затвора, бъди добър!</green>"
+    not_jailed: "<red>{0} не е в затвора, защо се опитваш?</red>"
+  list:
+    header: "<yellow>Налични затвори, избери си килия:</yellow>"
+    entry: "<gray>- {0}</gray><white>: {1} затворник(а)</white>"
+    empty: "<red>Няма затвори, анархия ли е това?</red>"
+  time:
+    format: "<gray>Формат за време: 1d2h3m4s (дни, часове, минути, секунди)</gray>"
+    invalid_format: "<red>Невалиден формат за време, използвай: 1d2h3m4s</red>"
+    remaining: "<gray>Оставащо време в затвора: {0}</gray>"
+    expired: "<green>Излежа си присъдата, свободен си!</green>"
+
+# Ban messages
+ban:
+  error:
+    create_dir: "<red>Не можах да създам папка за банове, хаос!</red>"
+    read_file: "<red>Не можах да прочета бан файла {0}: {1}</red>"
+    read_data: "<red>Не можах да прочета данните за бан на {0}, нещо се обърка!</red>"
+    save_data: "<red>Не можах да запазя данните за бан на {0}, хаос!</red>"
+    delete_file: "<red>Не можах да изтрия бан файла за {0}, упорит е!</red>"
+  not_banned: "<green>Този играч не е баннат, защо се притесняваш?</green>"
+  message: "<red>Баннат си от сървъра, мисли си за постъпките!</red>"
+  reason: "<red>Причина: {0}, не се оправдавай!</red>"
+  expires: "<red>Изтича: {0}, отброявай дните!</red>"
+  permanent_message: "<red>Този бан е завинаги, няма бягство!</red>"
+  staff: "<red>Баннат от: {0}, той е шефът!</red>"
+  date: "<red>Дата на бана: {0}, паметен ден!</red>"
+  duration: "<red>Продължителност: {0}, търпение!</red>"
+  permanent: "<red>Завинаги, няма връщане назад!</red>"
+
+# Teleport messages
+teleport:
+  module_unavailable: "<red>Грешка: Телепорт модулът е на почивка!</red>"
+  error_occurred: "<red>Нещо се обърка с телепорта, сигурно е пълнолуние!</red>"
+  no_permission: "<red>Нямаш право да се телепортираш, не си магьосник!</red>"
+  error:
+    init_tables: "<red>Не можах да подготвя таблиците за телепорт, хаос!</red>"
+    load_warps: "<red>Не можах да заредя точките за телепорт, изгубиха се!</red>"
+    load_spawn: "<red>Не можах да заредя точката за раждане, нещо се обърка!</red>"
+    load_homes: "<red>Не можах да заредя домовете за играч: {0}</red>"
+    set_home: "<red>Не можах да настроя дом за играч: {0}, хаос!</red>"
+    delete_home: "<red>Не можах да изтрия дом за играч: {0}, упорит е!</red>"
+    set_warp: "<red>Не можах да настроя точка за телепорт: {0}</red>"
+    delete_warp: "<red>Не можах да изтрия точка за телепорт: {0}, някой я ползва!</red>"
+    set_spawn: "<red>Не можах да настроя точка за раждане, нещо се обърка!</red>"
+  tpa:
+    usage: "<red>Използвай: /tpa <player>, не е магия!</red>"
+    sent: "<green>Изпрати заявка за телепорт до {0}, дръж палци!</green>"
+    received: "<yellow>{0}</yellow><green> иска да се телепортира до теб. Използвай </green>/tpaccept<green> или </green>/tpdeny"
+    expired: "<red>Заявката ти за телепорт до {0} изтече, бързо бяга времето!</red>"
+    no_requests: "<red>Нямаш чакащи заявки за телепорт, сам си!</red>"
+    already_pending: "<red>Вече имаш заявка до {0}, не бързай!</red>"
+  tpaccept:
+    usage: "<red>Използвай: /tpaccept, не е сложно!</red>"
+    success: "<green>Заявката за телепорт е приета, идват!</green>"
+    accepted: "<green>{0} прие заявката ти, телепортираш се!</green>"
+  tpdeny:
+    usage: "<red>Използвай: /tpdeny, не е ядрена физика!</red>"
+    success: "<green>Заявката за телепорт е отказана, чао!</green>"
+    denied: "<red>{0} отказа телепорта ти, явно не те харесва!</red>"
+  request:
+    cancelled_quit: "<red>{0} се изключи, заявката за телепорт е отменена!</red>"
+    cancelled_sender: "<red>{0} отмени заявката си за телепорт, страхливец!</red>"
+    instructions: "<yellow>Използвай /tpaccept за да приемеш или /tpdeny за да откажеш.</yellow>"
+  spawn:
+    set: "<green>Точка за раждане е настроена, нов живот!</green>"
+    teleported: "<green>Телепортиран до спауна, добре дошъл!</green>"
+  back:
+    teleported: "<green>Телепортиран до предишното ти място, носталгия!</green>"
+    no_previous: "<red>Нямаш предишно място за телепорт, пътешественик!</red>"
+
+# Home command messages
+home:
+  module_unavailable: "<red>Грешка: Модулът за домове е на почивка!</red>"
+  error_occurred: "<red>Нещо се обърка с командата, сигурно е пълнолуние!</red>"
+  no_permission: "<red>Нямаш право да ползваш тази команда, не си собственик!</red>"
+  usage: "<red>Използвай: /home [name], не се губи!</red>"
+  set_usage: "<red>Използвай: /sethome [name], направи си гнездо!</red>"
+  del_usage: "<red>Използвай: /delhome <name>, не е за вечно!</red>"
+  list_usage: "<red>Използвай: /homes, виж си гнездата!</red>"
+  not_found: "<red>Дом {0} не е намерен, сигурно е продаден!</red>"
+  set: "<green>Дом {0} е настроен, добре дошъл у дома!</green>"
+  deleted: "<green>Дом {0} е изтрит, време за нов!</green>"
+  teleported: "<green>Телепортиран до дома {0}, чакай кафе!</green>"
+  limit: "<red>Достигна лимита си за домове ({0}), не си султан!</red>"
+  exists: "<red>Дом с това име вече съществува, измисли ново!</red>"
+  invalid_name: "<red>Невалидно име за дом, ползвай букви, цифри и долни черти!</red>"
+  list:
+    header: "<yellow>Твоите домове, избери си гнездо:</yellow>"
+    entry: "<gray>- {0}</gray>"
+    empty: "<gray>Нямаш настроени домове, бездомник ли си?</gray>"
+    count: "<gray>Общо домове: {0}/{1}</gray>"
+  error:
+    load: "<red>Не можах да заредя домовете ти, нещо се обърка!</red>"
+    save: "<red>Не можах да запазя дома ти, хаос!</red>"
+    delete: "<red>Не можах да изтрия дома ти, упорит е!</red>"
+    teleport: "<red>Не можах да те телепортирам до дома ти, нещо се обърка!</red>"
+    world_not_found: "<red>Светът за този дом вече не съществува, изчезна!</red>"
+    unsafe: "<red>Тази локация не е безопасна за телепорт, пази се!</red>"
+
+# Warp command messages
+warp:
+  module_unavailable: "<red>Грешка: Модулът за точки за телепорт е на почивка!</red>"
+  error_occurred: "<red>Нещо се обърка с командата, сигурно е пълнолуние!</red>"
+  no_permission: "<red>Нямаш право да ползваш тази команда, не си магьосник!</red>"
+  usage: "<red>Използвай: /warp <name>, не се бави!</red>"
+  set_usage: "<red>Използвай: /setwarp <name>, направи си портал!</red>"
+  del_usage: "<red>Използвай: /delwarp <name>, махни го!</red>"
+  list_usage: "<red>Използвай: /warps, виж си порталите!</red>"
+  not_found: "<red>Точка за телепорт {0} не е намерена, изгуби се!</red>"
+  set: "<green>Точка за телепорт {0} е настроена, готово!</green>"
+  deleted: "<green>Точка за телепорт {0} е изтрита, чао!</green>"
+  teleported: "<green>Телепортиран до точка {0}, магия!</green>"
+  exists: "<red>Точка за телепорт с това име вече съществува, измисли ново!</red>"
+  invalid_name: "<red>Невалидно име за точка за телепорт, ползвай букви, цифри и долни черти!</red>"
+  no_permission_specific: "<red>Нямаш право да ползваш тази точка за телепорт, ВИП ли си?</red>"
+  no_permission_create: "<red>Нямаш право да създаваш точки за телепорт, не си магьосник!</red>"
+  no_permission_delete: "<red>Нямаш право да триеш точки за телепорт, не си админ!</red>"
+  list:
+    header: "<yellow>Налични точки за телепорт, избери си портал:</yellow>"
+    entry: "<gray>- {0}</gray>"
+    empty: "<gray>Няма налични точки за телепорт, празно е!</gray>"
+    count: "<gray>Общо точки за телепорт: {0}</gray>"
+  error:
+    save_failed: "<red>Не можах да запазя точката за телепорт, хаос!</red>"
+    load: "<red>Не можах да заредя точките за телепорт, изгубиха се!</red>"
+    save: "<red>Не можах да запазя точката за телепорт, нещо се обърка!</red>"
+    delete: "<red>Не можах да изтрия точката за телепорт, упорита е!</red>"
+    teleport: "<red>Не можах да те телепортирам до точката, нещо се обърка!</red>"
+    world_not_found: "<red>Светът за тази точка за телепорт вече не съществува, изчезна!</red>"
+    unsafe: "<red>Тази локация не е безопасна за телепорт, пази се!</red>"
+
+# Moderator command messages
+moderator:
+  error:
+    command_error: "<red>Командата се провали, сигурно е пълнолуние!</red>"
+    no_permission: "<red>Нямаш право за тази команда, не си шериф!</red>"
+    player_not_found: "<red>Играчът не е намерен или е офлайн, нинджа!</red>"
+    never_played: "<red>Играчът {0} никога не е играл тук, новобранец!</red>"
+    invalid_duration: "<red>Невалиден формат за време! Използвай: 1d2h3m</red>"
+  ban:
+    usage: "<red>Използвай: /ban <player> <reason>, не е сложно!</red>"
+    already_banned: "<red>{0} вече е баннат, не прекалявай!</red>"
+    cannot_self: "<red>Не можеш да се банираш сам, това е тъжно!</red>"
+    broadcast: "<red>{0} беше баннат от {1} за: {2}</red>"
+    success: "<green>Успешно баннах {0}, чао!</green>"
+  tempban:
+    usage: "<red>Използвай: /tempban <player> <duration> <reason>, бъди точен!</red>"
+    duration_format: "<gray>Формат за време: 1d2h3m (дни, часове, минути)</gray>"
+    broadcast: "<red>{0} беше временно баннат от {1} за {2}: {3}</red>"
+    success: "<green>Успешно временно баннах {0} за {1}. Причина: {2}</green>"
+  kick:
+    usage: "<red>Използвай: /kick <player> <reason>, не е магия!</red>"
+    cannot_self: "<red>Не можеш да се изриташ сам, това е странно!</red>"
+    message: "<red>Изритан си от {0}: {1}</red>"
+    broadcast: "<yellow>{0} беше изритан от {1} за: {2}</yellow>"
+    success: "<green>Успешно изритах {0}. Причина: {1}</green>"
+  unban:
+    usage: "<red>Използвай: /unban <player>, пусни го на свобода!</red>"
+    not_banned: "<red>{0} не е баннат, защо се опитваш?</red>"
+    success: "<green>{0} беше дебаннат, добре дошъл обратно!</green>"
+    broadcast: "<green>{0} беше дебаннат от {1}</green>"
+
+# AFK command messages
+afk:
+  module_unavailable: "<red>Грешка: AFK модулът е на почивка!</red>"
+  error_occurred: "<red>Нещо се обърка с командата, сигурно е пълнолуние!</red>"
+  player_only: "<red>Само играчи могат да ползват тази команда, не ботове!</red>"
+  player_not_found: "<red>Играчът {0} изчезна като ключовете ми!</red>"
+  toggled_other: "<green>Превключих AFK статуса на {0} на {1}, браво!</green>"
+  status:
+    on: "включен"
+    off: "изключен"

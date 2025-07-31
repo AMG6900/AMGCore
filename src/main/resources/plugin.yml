@@ -1,0 +1,451 @@
+name: AMGCore
+version: '${project.version}'
+main: amg.plugins.aMGCore.AMGCore
+api-version: '1.20'
+authors: [AMG]
+description: Core plugin for AMG server
+softdepend: [LuckPerms, PlaceholderAPI]
+
+# Libraries to be loaded by the plugin
+libraries:
+  - com.h2database:h2:2.2.224
+
+commands:
+  core:
+    description: Core plugin commands
+    usage: /core [reload|debug|list]
+    aliases: []
+  coredebug:
+    description: Toggle debug mode
+    usage: /coredebug [on|off|list]
+    permission: amgcore.debug
+  module:
+    description: Manage plugin modules
+    usage: /module [list|enable|disable|info|reload]
+    permission: amgcore.command.module
+  amgban:
+    description: Ban a player
+    usage: /amgban <player> <reason>
+    permission: amgcore.ban
+  amgtempban:
+    description: Temporarily ban a player
+    usage: /amgtempban <player> <duration> <reason>
+    permission: amgcore.tempban
+  amgunban:
+    description: Unban a player
+    usage: /amgunban <player>
+    permission: amgcore.unban
+  amgkick:
+    description: Kick a player
+    usage: /amgkick <player> <reason>
+    permission: amgcore.kick
+  lookinventory:
+    description: View another player's inventory
+    usage: /lookinventory <player>
+    permission: amgcore.command.lookinventory
+    aliases: [invsee]
+  createjail:
+    description: Create a new jail at your current location
+    usage: /createjail <n>
+    permission: amgcore.command.createjail
+  deletejail:
+    description: Delete an existing jail
+    usage: /deletejail <n>
+    permission: amgcore.command.deletejail
+  jail:
+    description: Jail a player
+    usage: /jail <player> <jail> <time> [reason]
+    permission: amgcore.command.jail
+  unjail:
+    description: Release a player from jail
+    usage: /unjail <player>
+    permission: amgcore.command.unjail
+  jaillist:
+    description: List all available jails
+    usage: /jaillist
+    permission: amgcore.command.jaillist
+  money:
+    description: Check your balance or another player's balance
+    usage: /money [player]
+    aliases: [balance]
+  givemoney:
+    description: Give money to a player
+    usage: /givemoney <player> <amount>
+    permission: amgcore.command.givemoney
+  setmoney:
+    description: Set a player's balance
+    usage: /setmoney <player> <amount>
+    permission: amgcore.command.setmoney
+  balancetop:
+    description: View the richest players
+    usage: /balancetop
+    permission: amgcore.command.balancetop
+    aliases: [baltop]
+  tpa:
+    description: Send a teleport request to a player
+    usage: /tpa <player>
+    permission: amgcore.command.tpa
+  tpaccept:
+    description: Accept a teleport request
+    usage: /tpaccept
+    permission: amgcore.command.tpaccept
+  tpdeny:
+    description: Deny a teleport request
+    usage: /tpdeny
+    permission: amgcore.command.tpdeny
+  sethome:
+    description: Set a home location
+    usage: /sethome <n>
+    permission: amgcore.command.sethome
+  home:
+    description: Teleport to a home location
+    usage: /home [name]
+    permission: amgcore.command.home
+  delhome:
+    description: Delete a home location
+    usage: /delhome <n>
+    permission: amgcore.command.delhome
+  setspawn:
+    description: Set the spawn location
+    usage: /setspawn
+    permission: amgcore.command.setspawn
+  spawn:
+    description: Teleport to spawn
+    usage: /spawn
+    permission: amgcore.command.spawn
+  ad:
+    description: Send a server-wide advertisement
+    usage: /ad <message>
+    permission: amgcore.command.ad
+    aliases: [advertise]
+  msg:
+    description: Send a private message to a player
+    usage: /msg <player> <message>
+    permission: amgcore.command.msg
+  r:
+    description: Reply to the last private message
+    usage: /r <message>
+    aliases: [reply]
+    permission: amgcore.command.msg
+  broadcast:
+    description: Broadcast a message to all players
+    usage: /broadcast <message>
+    aliases: [bc]
+    permission: amgcore.command.broadcast
+  mute:
+    description: Mute a player
+    usage: /mute <player> <duration> [reason]
+    permission: amgcore.command.mute
+  unmute:
+    description: Unmute a player
+    usage: /unmute <player>
+    permission: amgcore.command.unmute
+  vanish:
+    description: Toggle invisibility
+    usage: /vanish [player]
+    aliases: [v]
+    permission: amgcore.command.vanish
+  god:
+    description: Toggle god mode
+    usage: /god [player]
+    permission: amgcore.command.god
+  fly:
+    description: Toggle flight
+    usage: /fly [player|off]
+    permission: amgcore.command.fly
+  speed:
+    description: Set walk or flight speed
+    usage: /speed <speed> [walk|fly] [player]
+    permission: amgcore.command.speed
+  heal:
+    description: Restore health and extinguish fire
+    usage: /heal [player]
+    permission: amgcore.command.heal
+  feed:
+    description: Restore hunger and saturation
+    usage: /feed [player]
+    permission: amgcore.command.feed
+  back:
+    description: Return to your previous location
+    usage: /back
+    permission: amgcore.command.back
+  warplist:
+    description: List all available warps
+    usage: /warplist
+    permission: amgcore.command.warp
+  setwarp:
+    description: Set a warp
+    usage: /setwarp
+    permission: amgcore.command.setwarp
+  delwarp:
+    description: Delete a warp
+    usage: /delwarp
+    permission: amgcore.command.delwarp
+  warp:
+    description: Teleport to warp
+    usage: /warp
+    permission: amgcore.command.warp
+  afk:
+    description: Toggle AFK status
+    usage: /afk [player] [reason]
+    permission: amgcore.command.afk
+  stats:
+    description: View player statistics
+    usage: /stats [player]
+    permission: amgcore.command.stats
+  playtime:
+    description: View player playtime
+    usage: /playtime [player]
+    permission: amgcore.command.playtime
+    aliases: [pt]
+  rules:
+    description: View server rules
+    usage: /rules [category|reload]
+    permission: amgcore.command.rules
+  serverstats:
+    description: View server statistics
+    usage: /serverstats
+    permission: amgcore.command.serverstats
+
+permissions:
+  amgcore.*:
+    description: Gives access to all AMGCore commands
+    children:
+      amgcore.debug: true
+      amgcore.ban: true
+      amgcore.tempban: true
+      amgcore.unban: true
+      amgcore.kick: true
+      amgcore.command.lookinventory: true
+      amgcore.command.lookinventory.self: true
+      amgcore.command.createjail: true
+      amgcore.command.deletejail: true
+      amgcore.command.jail: true
+      amgcore.command.unjail: true
+      amgcore.command.jaillist: true
+      amgcore.jail.jailed: false
+      amgcore.command.money.others: true
+      amgcore.command.givemoney: true
+      amgcore.command.setmoney: true
+      amgcore.command.balancetop: true
+      amgcore.command.tpa: true
+      amgcore.command.tpaccept: true
+      amgcore.command.tpdeny: true
+      amgcore.command.back: true
+      amgcore.command.sethome: true
+      amgcore.command.home: true
+      amgcore.command.delhome: true
+      amgcore.command.setwarp: true
+      amgcore.command.warp: true
+      amgcore.command.delwarp: true
+      amgcore.command.spawn: true
+      amgcore.command.setspawn: true
+      amgcore.command.msg: true
+      amgcore.command.broadcast: true
+      amgcore.command.ad: true
+      amgcore.command.mute: true
+      amgcore.command.unmute: true
+      amgcore.command.vanish: true
+      amgcore.command.vanish.others: true
+      amgcore.command.god: true
+      amgcore.command.god.others: true
+      amgcore.command.fly: true
+      amgcore.command.fly.others: true
+      amgcore.command.speed: true
+      amgcore.command.speed.others: true
+      amgcore.command.heal: true
+      amgcore.command.heal.others: true
+      amgcore.command.feed: true
+      amgcore.command.feed.others: true
+      amgcore.chat.color: true
+      amgcore.chat.format: true
+      amgcore.command.afk: true
+      amgcore.command.afk.others: true
+      amgcore.afk.exempt: true
+      amgcore.command.stats: true
+      amgcore.command.stats.others: true
+      amgcore.command.playtime: true
+      amgcore.command.playtime.others: true
+      amgcore.command.rules: true
+      amgcore.command.rules.reload: true
+      amgcore.command.serverstats: true
+  amgcore.debug:
+    description: Allows toggling debug mode
+    default: op
+  amgcore.ban:
+    description: Allows banning players
+    default: op
+  amgcore.tempban:
+    description: Allows temporary banning players
+    default: op
+  amgcore.unban:
+    description: Allows unbanning players
+    default: op
+  amgcore.kick:
+    description: Allows kicking players
+    default: op
+  amgcore.ban.notify:
+    description: Receive ban notifications
+    default: op
+  amgcore.kick.notify:
+    description: Receive kick notifications
+    default: op
+  amgcore.command.lookinventory:
+    description: Allows viewing other players' inventories
+    default: op
+  amgcore.command.lookinventory.self:
+    description: Allows viewing own inventory
+    default: op
+  amgcore.command.createjail:
+    description: Allows creating jails
+    default: op
+  amgcore.command.deletejail:
+    description: Allows deleting jails
+    default: op
+  amgcore.command.jail:
+    description: Allows jailing players
+    default: op
+  amgcore.command.unjail:
+    description: Allows releasing players from jail
+    default: op
+  amgcore.command.jaillist:
+    description: Allows listing all jails
+    default: op
+  amgcore.jail.notify:
+    description: Receive jail notifications
+    default: op
+  amgcore.jail.jailed:
+    description: Prevents players from being jailed
+    default: false
+  amgcore.command.money.others:
+    description: Allows checking other players' balance
+    default: op
+  amgcore.command.givemoney:
+    description: Allows giving money to players
+    default: op
+  amgcore.command.setmoney:
+    description: Allows setting players' balance
+    default: op
+  amgcore.command.balancetop:
+    description: Allows viewing the richest players
+    default: op
+  amgcore.command.tpa:
+    description: Allows sending teleport requests
+    default: true
+  amgcore.command.tpaccept:
+    description: Allows accepting teleport requests
+    default: true
+  amgcore.command.tpdeny:
+    description: Allows denying teleport requests
+    default: true
+  amgcore.command.back:
+    description: Allows using the back command
+    default: true
+  amgcore.command.sethome:
+    description: Allows setting home locations
+    default: true
+  amgcore.command.home:
+    description: Allows teleporting to home locations
+    default: true
+  amgcore.command.delhome:
+    description: Allows deleting home locations
+    default: true
+  amgcore.command.setwarp:
+    description: Allows setting warp locations
+    default: op
+  amgcore.command.warp:
+    description: Allows teleporting to warp locations
+    default: true
+  amgcore.command.delwarp:
+    description: Allows deleting warp locations
+    default: op
+  amgcore.command.spawn:
+    description: Allows teleporting to spawn
+    default: true
+  amgcore.command.setspawn:
+    description: Allows setting the spawn location
+    default: op
+  amgcore.command.msg:
+    description: Allows sending private messages
+    default: true
+  amgcore.command.broadcast:
+    description: Allows broadcasting messages to all players
+    default: op
+  amgcore.command.ad:
+    description: Allows sending server-wide advertisements
+    default: op
+  amgcore.command.mute:
+    description: Allows muting players
+    default: op
+  amgcore.command.unmute:
+    description: Allows unmuting players
+    default: op
+  amgcore.command.vanish:
+    description: Allows using vanish
+    default: op
+  amgcore.command.vanish.others:
+    description: Allows using vanish on other players
+    default: op
+  amgcore.command.god:
+    description: Allows using god mode
+    default: op
+  amgcore.command.god.others:
+    description: Allows using god mode on other players
+    default: op
+  amgcore.command.fly:
+    description: Allows using flight
+    default: op
+  amgcore.command.fly.others:
+    description: Allows using flight on other players
+    default: op
+  amgcore.command.speed:
+    description: Allows changing movement speed
+    default: op
+  amgcore.command.speed.others:
+    description: Allows changing movement speed of other players
+    default: op
+  amgcore.command.heal:
+    description: Allows healing
+    default: op
+  amgcore.command.heal.others:
+    description: Allows healing other players
+    default: op
+  amgcore.command.feed:
+    description: Allows feeding
+    default: op
+  amgcore.command.feed.others:
+    description: Allows feeding other players
+    default: op
+  amgcore.chat.color:
+    description: Allows using color codes in chat
+    default: op
+  amgcore.chat.format:
+    description: Allows using formatting codes in chat
+    default: op
+  amgcore.command.afk:
+    description: Allows using AFK command
+    default: true
+  amgcore.afk.exempt:
+    description: Exempts player from AFK kick
+    default: op
+  amgcore.command.stats:
+    description: Allows viewing own stats
+    default: true
+  amgcore.command.stats.others:
+    description: Allows viewing other players' stats
+    default: op
+  amgcore.command.playtime:
+    description: Allows viewing own playtime
+    default: true
+  amgcore.command.playtime.others:
+    description: Allows viewing other players' playtime
+    default: op
+  amgcore.command.rules:
+    description: Allows viewing server rules
+    default: true
+  amgcore.command.rules.reload:
+    description: Allows reloading server rules
+    default: op
+  amgcore.command.serverstats:
+    description: Allows viewing server statistics
+    default: op
