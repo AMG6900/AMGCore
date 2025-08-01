@@ -137,10 +137,6 @@
                                     <pattern>com.zaxxer.hikari</pattern>
                                     <shadedPattern>amg.plugins.aMGCore.lib.hikari</shadedPattern>
                                 </relocation>
-                                <relocation>
-                                    <pattern>org.bstats</pattern>
-                                    <shadedPattern>amg.plugins.aMGCore.bstats</shadedPattern>
-                                </relocation>
                             </relocations>
                         </configuration>
                     </execution>
