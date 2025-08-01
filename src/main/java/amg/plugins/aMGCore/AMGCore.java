@@ -1,6 +1,5 @@
 package amg.plugins.aMGCore;
 
-import org.bstats.bukkit.Metrics;
 import amg.plugins.aMGCore.api.CoreAPI;
 import amg.plugins.aMGCore.api.ModuleRegistry;
 import amg.plugins.aMGCore.commands.CoreCommand;
@@ -87,8 +86,6 @@ public final class AMGCore extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        int pluginId = 26718;
-        Metrics metrics = new Metrics(this, pluginId);
         try {
             instance = this;
             
