@@ -1,0 +1,123 @@
+# AMGCore Configuration
+# Version: 1.0
+
+# Locale settings
+locale:
+  # Default locale to use (e.g., en_US, bg_BG)
+  default: "en_US"
+  
+  # Whether to use the player's client locale if available
+  use_client_locale: true
+  
+  # Fallback locale if client locale is not available
+  fallback_locale: "en_US"
+
+# Debug mode
+# Set to true to enable debug logging
+debug: false
+
+# Storage settings
+storage:
+  # Data directory relative to plugin folder
+  data_directory: "data"
+  
+  # Auto-save interval in seconds
+  auto_save_interval: 300
+  
+  # Database settings
+  database:
+    # Database name (relative to plugin folder)
+    name: "amgcore"
+    
+    # Database password
+    password: "changeme"
+    
+    # Whether to encrypt the database
+    encrypt: true
+    
+    # Connection pool settings
+    max_pool_size: 10
+    min_idle: 5
+    idle_timeout: 60000
+    connection_timeout: 30000
+    max_lifetime: 1800000
+
+# Module settings
+modules:
+  # Modules to auto-enable on startup
+  # Available modules:
+  # - database: Database operations (required)
+  # - logging: Logging operations (required)
+  # - playerdata: Player data management
+  # - ban: Ban system
+  # - chat: Chat management
+  # - jail: Jail system
+  # - kit: Kit management
+  # - player: Player utilities
+  # - serverinfo: Server information
+  # - stats: Player statistics
+  # - teleport: Teleportation
+  auto_enable:
+    - database    # Required
+    - logging     # Required
+    - playerdata  # Recommended
+    - ban
+    - chat
+    - jail
+    - kit
+    - player
+    - serverinfo
+    - stats
+    - teleport
+
+# Memory management settings
+memory:
+  # Whether to enable memory monitoring and optimization
+  monitoring_enabled: true
+  
+  # Memory monitoring interval in seconds
+  monitoring_interval: 300
+  
+  # Memory usage threshold (percentage) that triggers optimization
+  usage_threshold: 85
+  
+  # Cache settings
+  cache:
+    # Maximum number of players to keep in cache
+    max_size: 1000
+    
+    # Target size after trimming cache
+    trim_size: 800
+    
+    # Cache expiry time in minutes
+    expiry_time: 10
+
+# Logging settings
+logging:
+  # Whether to log player joins
+  player_join: true
+  
+  # Whether to log auto-saves
+  auto_save: true
+  
+  # Whether to log item transactions
+  item_transactions: true
+  
+  # Whether to log teleports
+  teleports: true
+  
+  # Whether to log chat messages
+  chat: true
+
+# Player settings
+player:
+  # Whether to use the player's last location on join
+  use_last_location: true
+  
+  # Default spawn location if last location is not available
+  spawn:
+    x: 0.0
+    y: 64.0
+    z: 0.0
+    yaw: 0.0
+    pitch: 0.0 

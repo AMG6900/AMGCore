@@ -1,0 +1,595 @@
+# AMGCore English (US) Language File
+
+# General messages
+general:
+  error: "<red>An error occurred: {0}</red>"
+  player_only: "<red>This command can only be used by players.</red>"
+
+# Command messages
+command:
+  unknown: "<red>Unknown command</red>"
+  no_permission: "<red>You don't have permission to use this command</red>"
+  players_only: "<red>This command can only be used by players</red>"
+  player_not_found: "<red>Player not found: {0}</red>"
+  core:
+    reload_success: "<green>Plugin configuration reloaded successfully.</green>"
+    data_usage: "<red>Usage: /core data <player></red>"
+    data_reloaded: "<green>Data reloaded for {0}.</green>"
+    unknown_option: "<red>Unknown option. Use 'reload', 'data', or 'info'.</red>"
+    module:
+      enabled: "<green>Module {0} has been enabled.</green>"
+      disabled: "<green>Module {0} has been disabled.</green>"
+      already_enabled: "<yellow>Module {0} is already enabled.</yellow>"
+      already_disabled: "<yellow>Module {0} is already disabled.</yellow>"
+      not_found: "<red>Module {0} not found.</red>"
+      enable_failed: "<red>Failed to enable module {0}. Reason: {1}</red>"
+      disable_failed: "<red>Failed to disable module {0}. Reason: {1}</red>"
+      dependency_failed: "<red>Failed to enable dependency {0} for module {1}.</red>"
+      usage: "<red>Usage: /module <list|enable|disable|info|reload></red>"
+      list:
+        header: "<yellow>Available Modules:</yellow>"
+        entry: "<gray>- {0}: {1}</gray>"
+        empty: "<red>No modules available.</red>"
+      info:
+        header: "<yellow>Module Information: {0}</yellow>"
+        status: "<gray>Status: {0}</gray>"
+        dependencies: "<gray>Dependencies: {0}</gray>"
+        no_dependencies: "<gray>Dependencies: None</gray>"
+      reload:
+        success: "<green>Module {0} has been reloaded.</green>"
+        failed: "<red>Failed to reload module {0}. Reason: {1}</red>"
+    info:
+      header: "<yellow>AMGCore Information:</yellow>"
+      version: "<white>Version:</white> <gray>{0}</gray>"
+      status_header: "<yellow>Status:</yellow>"
+      debug_status: "<white>Debug Mode:</white> <gray>{0}</gray>"
+      players_header: "<yellow>Players:</yellow>"
+      online_players: "<white>Online Players:</white> <gray>{0}</gray>"
+      loaded_data: "<white>Loaded Player Data:</white> <gray>{0}</gray>"
+      storage_header: "<yellow>Storage:</yellow>"
+      data_directory: "<white>Data Directory:</white> <gray>{0}</gray>"
+      save_interval: "<white>Auto-Save Interval:</white> <gray>{0}s</gray>"
+      commands_header: "<yellow>Commands:</yellow>"
+      command_core: "<white>/core</white> <gray>- Core plugin commands</gray>"
+      command_reload: "<white>/core reload</white> <gray>- Reload configuration</gray>"
+      command_data: "<white>/core data <player></white> <gray>- Reload player data</gray>"
+      command_debug: "<white>/core debug</white> <gray>- Toggle debug mode</gray>"
+  afk:
+    kick_message: "<red>You have been kicked for being AFK too long.</red>"
+    tab_prefix: "[AFK] "
+    now_afk: "<gray>{0} is now AFK{1}</gray>"
+    no_longer_afk: "<gray>{0} is no longer AFK</gray>"
+
+# Money commands
+money:
+  usage: "<red>Usage: /money [player]</red>"
+  console_usage: "<red>Console must specify a player</red>"
+  player_not_found: "<red>Player not found: {0}</red>"
+  no_permission_others: "<red>You don't have permission to check other players' balance</red>"
+  balance_self: "<green>Your balance: </green><gold>${0}</gold>"
+  balance_other: "<yellow>{0}s</yellow><green> balance: </green><gold>${1}</gold>"
+  checking_offline: "<gray>Checking offline player data...</gray>"
+  error:
+    data_load: "<red>Failed to load your player data</red>"
+    data_load_other: "<red>Failed to load player data for {0}</red>"
+    database_error: "<red>Database error: {0}</red>"
+    player_not_found: "<red>Player not found: {0}</red>"
+    invalid_amount: "<red>Invalid amount: {0}</red>"
+    amount_positive: "<red>Amount must be positive</red>"
+    amount_negative: "<red>Amount cannot be negative</red>"
+  givemoney:
+    usage: "<red>Usage: /givemoney <player> <amount></red>"
+    no_permission: "<red>You don't have permission to use this command</red>"
+    success: "<green>Given {0} to {1}. New balance: {2}</green>"
+    received: "<green>You received </green>{0}<green> from </green>{1}<green>. New balance: </green>{2}"
+  setmoney:
+    usage: "<red>Usage: /setmoney <player> <amount></red>"
+    no_permission: "<red>You don't have permission to use this command</red>"
+    success: "<green>Set {0}s balance to {1}</green>"
+    changed: "<green>Your balance was set to </green>{0}<green> by </green>{1}"
+  pay:
+    usage: "<red>Usage: /pay <player> <amount></red>"
+    console_denied: "<red>Console cannot use the pay command</red>"
+    self: "<red>You cannot pay yourself</red>"
+    insufficient_funds: "<red>You don't have enough money. Required: ${0}</red>"
+    sent: "<green>You sent ${0} to {1}. Your new balance: ${2}</green>"
+    received: "<green>You received ${0} from {1}. Your new balance: ${2}</green>"
+  baltop:
+    loading: "<gray>Loading balance rankings...</gray>"
+    header: "<gold>Top Players by Balance:</gold>"
+    entry: "<gray>{0}. </gray><yellow>{1}</yellow><gray>: </gray><gold>${2}</gold>"
+    empty: "<red>No balance data available.</red>"
+    footer: "<gray>Showing top 10 players</gray>"
+    error:
+      invalid_page: "<red>Invalid page number: {0}</red>"
+  unknown: "<red>Unknown money command</red>"
+  module_unavailable: "<red>Error: Money module is not available.</red>"
+  error_occurred: "<red>An error occurred while executing the command.</red>"
+
+# Playtime messages
+playtime:
+  usage: "<red>Usage: /playtime [player]</red>"
+  self: "<yellow>Your playtime: <white>{0}</white></yellow>"
+  other: "<yellow>{0}s playtime: <white>{1}</white></yellow>"
+  not_found: "<red>Player not found: {0}</red>"
+  module_unavailable: "<red>Error: Playtime module is not available.</red>"
+  error_occurred: "<red>An error occurred while executing the command.</red>"
+
+# Chat messages
+chat:
+  module_unavailable: "<red>Error: Chat module is not available.</red>"
+  error_occurred: "<red>An error occurred while executing the command.</red>"
+  no_permission: "<red>You don't have permission to use this command.</red>"
+  msg:
+    usage: "<red>Usage: /msg <player> <message></red>"
+    self: "<red>You cannot send a message to yourself.</red>"
+    player_not_found: "<red>Player not found: {0}</red>"
+    format_incoming: "<gray>[MSG]</gray>(<yellow>{0}</yellow> <gray>=></gray> <yellow>You</yellow>) <white>{1}</white>"
+    format_outgoing: "<gray>[MSG]</gray>(<yellow>You</yellow> <gray>=></gray> <yellow>{0}</yellow>) <white>{1}</white>"
+  mute:
+    usage: "<red>Usage: /mute <player> [duration] [reason]</red>"
+    no_permission: "<red>You don't have permission to mute players.</red>"
+    success: "<green>You have muted {0} for {1}. Reason: {2}</green>"
+    target_muted: "<red>You have been muted for {0} by {1}. Reason: {2}</red>"
+    unmute_success: "<green>You have unmuted {0}.</green>"
+    target_unmuted: "<green>You have been unmuted by {0}.</green>"
+    already_muted: "<red>{0} is already muted.</red>"
+    not_muted: "<red>{0} is not muted.</red>"
+    exempt: "<red>{0} cannot be muted.</red>"
+    self: "<red>You cannot mute yourself.</red>"
+    invalid_duration: "<red>Invalid duration format. Use: 1d, 2h, 30m, or 60s</red>"
+    invalid_time_unit: "<red>Invalid time unit. Use: d (days), h (hours), m (minutes), or s (seconds)</red>"
+  format:
+    global: "<gray>[GLOBAL]</gray> <yellow>{0}</yellow>: <white>{1}</white>"
+    incoming: "<gray>[MSG]</gray>(<yellow>{0}</yellow> <gray>=></gray> <yellow>You</yellow>) <white>{1}</white>"
+    outgoing: "<gray>[MSG]</gray>(<yellow>You</yellow> <gray>=></gray> <yellow>{0}</yellow>) <white>{1}</white>"
+  reply:
+    usage: "<red>Usage: /r <message></red>"
+    no_permission: "<red>You don't have permission to reply to messages.</red>"
+    no_recipient: "<red>You have no one to reply to.</red>"
+    recipient_offline: "<red>The player you were messaging is no longer online.</red>"
+  prefixes:
+    global: "<gray>[GLOBAL]</gray>"
+    msg: "<gray>[MSG]</gray>"
+    ad: "<gold>[AD]</gold>"
+  broadcast:
+    usage: "<red>Usage: /broadcast <message></red>"
+    no_permission: "<red>You don't have permission to broadcast messages.</red>"
+    format: "<red>[BROADCAST]</red> <yellow>{0}</yellow><white>: {1}</white>"
+  ads:
+    usage: "<red>Usage: /ad <message></red>"
+    no_permission: "<red>You don't have permission to create advertisements.</red>"
+    cooldown: "<red>You must wait {0} seconds before sending another advertisement.</red>"
+    success: "<green>Advertisement sent successfully.</green>"
+    insufficient_funds: "<red>Insufficient funds. Cost: ${0}</red>"
+    format: "<gold>[AD]</gold> <yellow>{0}</yellow>: <white>{1}</white>"
+  reply:
+    usage: "<red>Usage: /r <message></red>"
+    no_permission: "<red>You don't have permission to reply to messages.</red>"
+    no_recipient: "<red>You have no one to reply to.</red>"
+    recipient_offline: "<red>The player you were messaging is no longer online.</red>"
+  mute:
+    usage: "<red>Usage: /mute <player> [duration] [reason]</red>"
+    no_permission: "<red>You don't have permission to mute players.</red>"
+    success: "<green>You have muted {0} for {1}. Reason: {2}</green>"
+    target_muted: "<red>You have been muted for {0} by {1}. Reason: {2}</red>"
+    unmute_success: "<green>You have unmuted {0}.</green>"
+    target_unmuted: "<green>You have been unmuted by {0}.</green>"
+    already_muted: "<red>{0} is already muted.</red>"
+    not_muted: "<red>{0} is not muted.</red>"
+    exempt: "<red>{0} cannot be muted.</red>"
+    self: "<red>You cannot mute yourself.</red>"
+  unmute:
+    success: "<green>Successfully unmuted {0}.</green>"
+
+# Teleport commands
+teleport:
+  module_unavailable: "<red>Error: Teleport module is not available.</red>"
+  error_occurred: "<red>An error occurred while executing the command.</red>"
+  no_permission: "<red>You don't have permission to use this command.</red>"
+  tpa:
+    usage: "<red>Usage: /tpa <player></red>"
+    sent: "<green>Teleport request sent to {0}.</green>"
+    received: "<yellow>{0}</yellow><green> wants to teleport to you. Use </green>/tpaccept<green> or </green>/tpdeny"
+    expired: "<red>Your teleport request to {0} has expired.</red>"
+    no_requests: "<red>You have no pending teleport requests.</red>"
+    already_pending: "<red>You already have a pending request to {0}.</red>"
+  tpaccept:
+    usage: "<red>Usage: /tpaccept [player]</red>"
+    success: "<green>Teleport request accepted. Teleporting {0}...</green>"
+    accepted: "<green>{0} accepted your teleport request. Teleporting...</green>"
+    no_request: "<red>No teleport request from {0}.</red>"
+  tpdeny:
+    usage: "<red>Usage: /tpdeny [player]</red>"
+    success: "<green>Teleport request denied.</green>"
+    denied: "<red>{0} denied your teleport request.</red>"
+  home:
+    usage: "<red>Usage: /home [name]</red>"
+    set_usage: "<red>Usage: /sethome [name]</red>"
+    del_usage: "<red>Usage: /delhome <name></red>"
+    not_found: "<red>Home {0} not found.</red>"
+    set: "<green>Home {0} set.</green>"
+    deleted: "<green>Home {0} deleted.</green>"
+    teleported: "<green>Teleported to home {0}.</green>"
+    limit: "<red>You have reached your home limit ({0}).</red>"
+    list:
+      entry: "<gray>Homes list: {0}</gray>"
+      empty: "<red>No homes found.</red>"
+      teleported: "<green>Teleported to home {0}.</green>"
+  warp:
+    usage: "<red>Usage: /warp <name></red>"
+    set_usage: "<red>Usage: /setwarp <name></red>"
+    del_usage: "<red>Usage: /delwarp <name></red>"
+    not_found: "<red>Warp {0} not found.</red>"
+    set: "<green>Warp {0} set.</green>"
+    deleted: "<green>Warp {0} deleted.</green>"
+    teleported: "<green>Teleported to warp {0}.</green>"
+    list:
+      entry: "<gray>Warp list: {0}</gray>"
+      empty: "<red>No warps found.</red>"
+      teleported: "<green>Teleported to warp {0}.</green>"
+  spawn:
+    set: "<green>Spawn point set.</green>"
+    teleported: "<green>Teleported to spawn.</green>"
+  back:
+    teleported: "<green>Teleported to your previous location.</green>"
+    no_previous: "<red>You have no previous location to teleport to.</red>"
+
+# Player command messages
+player:
+  error:
+    manager_unavailable: "<red>Player manager is not available. Please contact an administrator.</red>"
+    command_error: "<red>An error occurred while executing the command.</red>"
+    player_not_found: "<red>Player not found.</red>"
+    console_specify_player: "<red>Console must specify a player.</red>"
+    no_permission_others: "<red>You don't have permission to use this command on other players.</red>"
+    no_permission: "<red>You don't have permission to use this command.</red>"
+  vanish:
+    enabled: "<green>Vanish mode enabled.</green>"
+    disabled: "<green>Vanish mode disabled.</green>"
+    enabled_other: "<green>Vanish mode enabled for {0}.</green>"
+    disabled_other: "<green>Vanish mode disabled for {0}.</green>"
+    other: "<green>Vanish mode {0} for {1}.</green>"
+    self: "<green>Vanish mode {0}.</green>"
+  god:
+    enabled: "<green>God mode enabled.</green>"
+    disabled: "<green>God mode disabled.</green>"
+    enabled_other: "<green>God mode enabled for {0}.</green>"
+    disabled_other: "<green>God mode disabled for {0}.</green>"
+    other: "<green>God mode {0} for {1}.</green>"
+    self: "<green>God mode {0}.</green>"
+  fly:
+    enabled: "<green>Flight enabled.</green>"
+    disabled: "<green>Flight disabled.</green>"
+    enabled_other: "<green>Flight enabled for {0}.</green>"
+    disabled_other: "<green>Flight disabled for {0}.</green>"
+    other: "<green>Flight {0} for {1}.</green>"
+    self: "<green>Flight enabled for you.</green>"
+  speed:
+    usage: "<red>Usage: /speed <1-10> [fly|walk] [player]</red>"
+    self: "<green>Set {0} speed to {1}.</green>"
+    other: "<green>Set {0}s {1} speed to {2}.</green>"
+    error:
+      invalid_range: "<red>Speed must be between 1 and 10.</red>"
+      invalid_number: "<red>Invalid speed value.</red>"
+  heal:
+    self: "<green>You have been healed.</green>"
+    other: "<green>Healed {0}.</green>"
+  feed:
+    self: "<green>You have been fed.</green>"
+    other: "<green>Fed {0}.</green>"
+
+# Stats command messages
+stats:
+  error:
+    manager_unavailable: "<red>Stats manager is not available. Please contact an administrator.</red>"
+    player_not_found: "<red>Player not found.</red>"
+    console_must_specify: "<red>Console must specify a player.</red>"
+    no_stats_found: "<red>No stats found for {0}.</red>"
+    command_error: "<red>An error occurred while executing the command.</red>"
+  display:
+    header: "<yellow>Stats for <white>{0}</white>:</yellow>"
+    first_join: "<yellow>First Join: <white>{0}</white></yellow>"
+    last_seen: "<yellow>Last Seen: <white>{0}</white></yellow>"
+    playtime: "<yellow>Playtime: <white>{0}</white></yellow>"
+    kills: "<yellow>Kills: <white>{0}</white> (<green>{1} PvP</green>, <red>{2} Mobs</red>)</yellow>"
+    deaths: "<yellow>Deaths: <white>{0}</white></yellow>"
+    kd_ratio: "<yellow>K/D Ratio: <white>{0}</white></yellow>"
+  time:
+    online_now: "Online now"
+    days_ago: "{0} days ago"
+    hours_ago: "{0} hours ago"
+    minutes_ago: "{0} minutes ago"
+    seconds_ago: "{0} seconds ago"
+
+# Server info messages
+serverinfo:
+  module_unavailable: "<red>Error: Server info module is not available.</red>"
+  error_occurred: "<red>An error occurred while executing the command.</red>"
+  no_permission: "<red>You don't have permission to use this command.</red>"
+  error:
+    save_rules: "<red>Failed to save server rules.</red>"
+  rules:
+    title: "<yellow>Server Rules</yellow>"
+    entry: "<gray>{0}.</gray> <white>{1}</white>"
+    empty: "<red>No rules found.</red>"
+    reloaded: "<green>Rules have been reloaded.</green>"
+  stats:
+    title: "<yellow>Server Statistics</yellow>"
+    uptime: "<yellow>Uptime:</yellow> <white>{0}</white>"
+    memory: "<yellow>Memory Usage:</yellow> <white>{0} MB / {1} MB (Max: {2} MB)</white>"
+    tps: "<yellow>TPS (1m, 5m, 15m):</yellow> <white>{0}</white>"
+    online_players: "<yellow>Players:</yellow> <white>{0}/{1}</white>"
+    worlds:
+      header: "<yellow>World Statistics:</yellow>"
+      entry: "<white>{0}:</white>"
+      chunks: "<gray>- Chunks:</gray> <white>{0}</white>"
+      entities: "<gray>- Entities:</gray> <white>{0}</white>"
+      living_entities: "<gray>- Living Entities:</gray> <white>{0}</white>"
+  playerlist:
+    title: "<yellow>Online Players ({0}/{1}):</yellow>"
+    world_header: "<green>{0} ({1}):</green>"
+    player: "  <white>{0}</white>"
+    player_afk: "  <white>{0} <gray>[AFK]</gray></white>"
+
+# Inventory messages
+inventory:
+  usage: "<red>Usage: /inventory <player></red>"
+  title: "{0}s Inventory"
+  opened: "<green>Opened {0}s inventory</green>"
+  error:
+    self_view: "<red>You cannot view your own inventory with this command</red>"
+    player_offline: "<red>Player is no longer online</red>"
+  look:
+    usage: "<red>Usage: /lookinventory <player></red>"
+    title: "{0}s Inventory"
+    error:
+      no_permission_self: "<red>You don't have permission to view your own inventory</red>"
+
+# AFK messages
+afk:
+  module_not_available: "<red>Error: AFK module is not available.</red>"
+  enabled: "<green>{0} is now AFK{1}</green>"
+  enabled_self: "<green>You are now AFK{0}</green>"
+  disabled: "<green>{0} is no longer AFK</green>"
+  disabled_self: "<green>You are no longer AFK</green>"
+  reason_suffix: " <gray>- {0}</gray>"
+
+# Debug messages
+debug:
+  usage: "<red>Usage: /coredebug <on|off|list></red>"
+  enabled: "<green>Debug mode enabled.</green>"
+  disabled: "<green>Debug mode disabled.</green>"
+  unknown_option: "<red>Unknown option. Use 'on', 'off', or 'list'</red>"
+  status:
+    header: "<gold>Debug Status:</gold>"
+    mode: "<yellow>- Mode: </yellow>{0,choice,0#<red>DISABLED</red>|1#<green>ENABLED</green>}"
+    log_dir: "<yellow>- Log Directory: </yellow><aqua>{0}</aqua>"
+
+# Jail messages
+jail:
+  info:
+    initialized: "Jail system initialized."
+    loaded_jails: "Loaded {0} jail locations."
+    loaded_players: "Loaded {0} jailed players."
+  error:
+    initialize_tables: "<red>Failed to initialize jail database tables.</red>"
+    world_not_found: "<red>Failed to load jail {0} - world {1} not found.</red>"
+    load_jails: "<red>Failed to load jails from database.</red>"
+    load_players: "<red>Failed to load jailed players from database.</red>"
+    create_jail: "<red>Failed to create jail {0}.</red>"
+    delete_jail: "<red>Failed to delete jail {0}.</red>"
+    jail_player: "<red>Failed to jail player {0}.</red>"
+    unjail_player: "<red>Failed to unjail player {0}.</red>"
+    update_data: "<red>Failed to update jail data for player {0}.</red>"
+  player:
+    jailed: "<red>You have been jailed for {0}.</red>"
+    jailed_reason: "<red>Reason: {0}</red>"
+    released: "<green>You have been released from jail.</green>"
+    released_time_served: "<green>You have served your time and been released.</green>"
+    time_remaining: "<gray>Time remaining in jail: {0} minutes</gray>"
+    no_break: "<red>You cannot break blocks while jailed.</red>"
+    no_place: "<red>You cannot place blocks while jailed.</red>"
+    no_command: "<red>You cannot use this command while jailed.</red>"
+    no_teleport: "<red>You cannot teleport while jailed.</red>"
+    no_damage: "<red>You cannot damage other players while jailed.</red>"
+    no_damage_jailed: "<red>You cannot damage jailed players.</red>"
+    no_interact: "<red>You cannot interact with blocks while jailed.</red>"
+    no_chat: "<red>You cannot send messages while jailed.</red>"
+    reconnect: "<green>You have been released from jail. Please reconnect to fully restore your permissions.</green>"
+  module_unavailable: "<red>Error: Jail module is not available.</red>"
+  error_occurred: "<red>An error occurred while executing the command.</red>"
+  no_permission: "<red>You don't have permission to use this command.</red>"
+  create:
+    usage: "<red>Usage: /createjail <name></red>"
+    success: "<green>Created jail {0}.</green>"
+    exists: "<red>Jail {0} already exists.</red>"
+  delete:
+    usage: "<red>Usage: /deletejail <name></red>"
+    success: "<green>Deleted jail {0}.</green>"
+    not_found: "<red>Jail {0} not found.</red>"
+    in_use: "<red>Cannot delete jail {0} - it is currently in use.</red>"
+  jail:
+    usage: "<red>Usage: /jail <player> <jail> <duration> [reason]</red>"
+    success: "<green>Jailed {0} in {1} for {2}. Reason: {3}</green>"
+    target: "<red>You have been jailed in {0} for {1}. Reason: {2}</red>"
+    already_jailed: "<red>{0} is already jailed.</red>"
+    not_found: "<red>Jail {0 not found.</red>"
+    exempt: "<red>{0} cannot be jailed.</red>"
+    self: "<red>You cannot jail yourself.</red>"
+  unjail:
+    usage: "<red>Usage: /unjail <player></red>"
+    success: "<green>Unjailed {0}.</green>"
+    target: "<green>You have been released from jail.</green>"
+    not_jailed: "<red>{0} is not jailed.</red>"
+  list:
+    header: "<yellow>Available Jails:</yellow>"
+    entry: "<gray>- {0}</gray><white>: {1} player(s)</white>"
+    empty: "<red>No jails available.</red>"
+  time:
+    format: "<gray>Time format: 1d2h3m4s (days, hours, minutes, seconds)</gray>"
+    invalid_format: "<red>Invalid time format. Use format: 1d2h3m4s</red>"
+    remaining: "<gray>Time remaining in jail: {0}</gray>"
+    expired: "<green>Your jail sentence has expired. You are now free.</green>"
+
+# Ban messages
+ban:
+  error:
+    create_dir: "<red>Failed to create bans directory.</red>"
+    read_file: "<red>Failed to read ban file {0}: {1}</red>"
+    read_data: "<red>Failed to read ban data for {0}.</red>"
+    save_data: "<red>Failed to save ban data for {0}.</red>"
+    delete_file: "<red>Failed to delete ban file for {0}.</red>"
+  not_banned: "<green>This player is not banned.</green>"
+  message: "<red>You are banned from this server!</red>"
+  reason: "<red>Reason: {0}</red>"
+  expires: "<red>Expires: {0}</red>"
+  permanent_message: "<red>This ban is permanent.</red>"
+  staff: "<red>Banned by: {0}</red>"
+  date: "<red>Ban date: {0}</red>"
+  duration: "<red>Duration: {0}</red>"
+  permanent: "<red>Permanent</red>"
+
+# Teleport messages
+teleport:
+  module_unavailable: "<red>Error: Teleport module is not available.</red>"
+  error_occurred: "<red>An error occurred while executing the command.</red>"
+  no_permission: "<red>You don't have permission to use this command.</red>"
+  error:
+    init_tables: "<red>Failed to initialize teleport tables.</red>"
+    load_warps: "<red>Failed to load warps.</red>"
+    load_spawn: "<red>Failed to load spawn location.</red>"
+    load_homes: "<red>Failed to load homes for player: {0}</red>"
+    set_home: "<red>Failed to set home for player: {0}</red>"
+    delete_home: "<red>Failed to delete home for player: {0}</red>"
+    set_warp: "<red>Failed to set warp: {0}</red>"
+    delete_warp: "<red>Failed to delete warp: {0}</red>"
+    set_spawn: "<red>Failed to set spawn location.</red>"
+  tpa:
+    usage: "<red>Usage: /tpa <player></red>"
+    sent: "<green>Teleport request sent to {0}.</green>"
+    received: "<yellow>{0}</yellow><green> wants to teleport to you. Use </green>/tpaccept<green> or </green>/tpdeny"
+    expired: "<red>Your teleport request to {0} has expired.</red>"
+    no_requests: "<red>You have no pending teleport requests.</red>"
+    already_pending: "<red>You already have a pending request to {0}.</red>"
+  tpaccept:
+    usage: "<red>Usage: /tpaccept</red>"
+    success: "<green>Teleport request accepted.</green>"
+    accepted: "<green>{0} accepted your teleport request. Teleporting...</green>"
+  tpdeny:
+    usage: "<red>Usage: /tpdeny</red>"
+    success: "<green>Teleport request denied.</green>"
+    denied: "<red>{0} denied your teleport request.</red>"
+  request:
+    cancelled_quit: "<red>{0} has logged out. Teleport request cancelled.</red>"
+    cancelled_sender: "<red>{0} has cancelled their teleport request.</red>"
+    instructions: "<yellow>Use /tpaccept to accept or /tpdeny to deny.</yellow>"
+  spawn:
+    set: "<green>Spawn point set.</green>"
+    teleported: "<green>Teleported to spawn.</green>"
+  back:
+    teleported: "<green>Teleported to your previous location.</green>"
+    no_previous: "<red>You have no previous location to teleport to.</red>"
+
+# Home command messages
+home:
+  module_unavailable: "<red>Error: Home module is not available.</red>"
+  error_occurred: "<red>An error occurred while executing the command.</red>"
+  no_permission: "<red>You don't have permission to use this command.</red>"
+  usage: "<red>Usage: /home [name]</red>"
+  set_usage: "<red>Usage: /sethome [name]</red>"
+  del_usage: "<red>Usage: /delhome <name></red>"
+  list_usage: "<red>Usage: /homes</red>"
+  not_found: "<red>Home {0} not found.</red>"
+  set: "<green>Home {0} set.</green>"
+  deleted: "<green>Home {0} deleted.</green>"
+  teleported: "<green>Teleported to home {0}.</green>"
+  limit: "<red>You have reached your home limit ({0}).</red>"
+  exists: "<red>A home with that name already exists.</red>"
+  invalid_name: "<red>Invalid home name. Use only letters, numbers, and underscores.</red>"
+  list:
+    header: "<yellow>Your Homes:</yellow>"
+    entry: "<gray>- {0}</gray>"
+    empty: "<gray>You have no homes set.</gray>"
+    count: "<gray>Total homes: {0}/{1}</gray>"
+  error:
+    load: "<red>Failed to load your homes.</red>"
+    save: "<red>Failed to save your home.</red>"
+    delete: "<red>Failed to delete your home.</red>"
+    teleport: "<red>Failed to teleport to your home.</red>"
+    world_not_found: "<red>The world for this home no longer exists.</red>"
+    unsafe: "<red>That location is not safe to teleport to.</red>"
+
+# Warp command messages
+warp:
+  module_unavailable: "<red>Error: Warp module is not available.</red>"
+  error_occurred: "<red>An error occurred while executing the command.</red>"
+  no_permission: "<red>You don't have permission to use this command.</red>"
+  usage: "<red>Usage: /warp <name></red>"
+  set_usage: "<red>Usage: /setwarp <name></red>"
+  del_usage: "<red>Usage: /delwarp <name></red>"
+  list_usage: "<red>Usage: /warps</red>"
+  not_found: "<red>Warp {0} not found.</red>"
+  set: "<green>Warp {0} set.</green>"
+  deleted: "<green>Warp {0} deleted.</green>"
+  teleported: "<green>Teleported to warp {0}.</green>"
+  exists: "<red>A warp with that name already exists.</red>"
+  invalid_name: "<red>Invalid warp name. Use only letters, numbers, and underscores.</red>"
+  no_permission_specific: "<red>You don't have permission to use this warp.</red>"
+  no_permission_create: "<red>You don't have permission to create warps.</red>"
+  no_permission_delete: "<red>You don't have permission to delete warps.</red>"
+  list:
+    header: "<yellow>Available Warps:</yellow>"
+    entry: "<gray>- {0}</gray>"
+    empty: "<gray>No warps available.</gray>"
+    count: "<gray>Total warps: {0}</gray>"
+  error:
+    save_failed: "<red>Failed to save warp.</red>"
+    load: "<red>Failed to load warps.</red>"
+    save: "<red>Failed to save warp.</red>"
+    delete: "<red>Failed to delete warp.</red>"
+    teleport: "<red>Failed to teleport to warp.</red>"
+    world_not_found: "<red>The world for this warp no longer exists.</red>"
+    unsafe: "<red>That location is not safe to teleport to.</red>"
+
+# Moderator command messages
+moderator:
+  error:
+    command_error: "<red>An error occurred while executing the command.</red>"
+    no_permission: "<red>You don't have permission to use this command!</red>"
+    player_not_found: "<red>Player not found or is offline!</red>"
+    never_played: "<red>Player {0} has never played on this server!</red>"
+    invalid_duration: "<red>Invalid duration format! Use format: 1d2h3m</red>"
+  ban:
+    usage: "<red>Usage: /ban <player> <reason></red>"
+    already_banned: "<red>{0} is already banned!</red>"
+    cannot_self: "<red>You cannot ban yourself!</red>"
+    broadcast: "<red>{0} has been banned by {1} for: {2}</red>"
+    success: "<green>Successfully banned {0}</green>"
+  tempban:
+    usage: "<red>Usage: /tempban <player> <duration> <reason></red>"
+    duration_format: "<gray>Duration format: 1d2h3m (days, hours, minutes)</gray>"
+    broadcast: "<red>{0} has been temporarily banned by {1} for {2}: {3}</red>"
+    success: "<green>Successfully temp-banned {0} for {1}. Reason: {2}</green>"
+  kick:
+    usage: "<red>Usage: /kick <player> <reason></red>"
+    cannot_self: "<red>You cannot kick yourself!</red>"
+    message: "<red>You have been kicked by {0}: {1}</red>"
+    broadcast: "<yellow>{0} has been kicked by {1} for: {2}</yellow>"
+    success: "<green>Successfully kicked {0}. Reason: {1}</green>"
+  unban:
+    usage: "<red>Usage: /unban <player></red>"
+    not_banned: "<red>{0} is not banned!</red>"
+    success: "<green>{0} has been unbanned.</green>"
+    broadcast: "<green>{0} has been unbanned by {1}</green>"
+
+# AFK command messages
+afk:
+  module_unavailable: "<red>Error: AFK module is not available.</red>"
+  error_occurred: "<red>An error occurred while executing the command.</red>"
+  player_only: "<red>Only players can use this command.</red>"
+  player_not_found: "<red>Player not found: {0}</red>"
+  toggled_other: "<green>Toggled AFK status for {0} to {1}</green>"
+  status:
+    on: "on"
+    off: "off"
